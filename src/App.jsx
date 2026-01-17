@@ -4,7 +4,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer"
 import Body from "./components/Body";
 import About from "./components/About";
-import ServicesPage from "./components/Servicespage";
+import ServicesPage from "./components/ServicesPage";
 import Contact from "./components/Contact";
 import ArahInfotech from "./components/backend/ArahInfotech";
 
