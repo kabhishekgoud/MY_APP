@@ -1,0 +1,103 @@
+/* --- CSS Reset & Variables --- */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --dark: #0f172a;
+    --gray-bg: #f8fafc;
+    --text-main: #334155;
+    --text-muted: #64748b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--text-main); line-height: 1.6; }
+
+/* --- Layout Utilities --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 100px 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.align-center { align-items: center; }
+.gap-large { gap: 60px; }
+.text-center { text-align: center; }
+.blue { color: var(--primary); }
+
+/* --- Hero Section Fixes --- */
+.hero-section {
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), 
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80') center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    color: white;
+    text-align: center; /* Centers all text globally in this section */
+}
+
+.hero-container { 
+    width: 100%; 
+    max-width: 850px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Forces buttons and text to center */
+}
+
+/* FIX: Removed the 300px margin that was pushing your text out of alignment */
+.txt_info {
+    color: white;
+    font-size: 1.25rem;
+    margin-top: 20px;   /* Small gap from heading */
+    margin-bottom: 40px; /* Gap before buttons */
+    opacity: 0.9;
+    max-width: 700px; /* Keeps text readable */
+}
+
+.hero-section h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-top: 0; font-weight: 800; line-height: 1.2; }
+.highlight { color: #60a5fa; }
+.hero-btns { display: flex; justify-content: center; gap: 20px; }
+
+/* --- Buttons --- */
+.btn-primary { background: var(--primary); color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+.btn-secondary { border: 2px solid white; color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-secondary:hover { background: white; color: var(--dark); }
+
+/* --- About Stats --- */
+.about-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.stat-card { background: var(--gray-bg); padding: 30px; border-radius: 16px; text-align: center; border: 1px solid #e2e8f0; }
+.stat-card h3 { font-size: 2rem; color: var(--primary); margin-bottom: 5px; }
+
+/* --- Services Alignment Fix --- */
+.services-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 30px; 
+    margin-top: 60px;
+    justify-content: center; /* Centers cards if they don't fill the whole row */
+}
+
+.service-card { 
+    padding: 40px; 
+    background: white; 
+    border-radius: 16px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
+    border-top: 5px solid var(--primary); 
+    text-align: center; /* Centers content inside the service cards */
+}
+
+.service-icon { color: var(--primary); margin-bottom: 20px; display: flex; justify-content: center; }
+
+/* --- Mobile --- */
+@media (max-width: 992px) {
+    .grid-2 { grid-template-columns: 1fr; }
+}
+
+
+.info-card-large 
+{
+    border: #0f172a 3px solid;
+    border-radius:30px ;
+    padding: 10px;
+    box-shadow: black ;
+}
+.vision-mission-section{
+    margin-bottom: 30px;
+}

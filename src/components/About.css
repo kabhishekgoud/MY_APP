@@ -1,0 +1,112 @@
+/* AboutPage.css */
+.about-container {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.about-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(rgba(0, 43, 91, 0.8), rgba(0, 43, 91, 0.8)), 
+                url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+/* Section Wrapper */
+.section-padding {
+    padding: 80px 10%;
+}
+
+/* Who We Are Section */
+.who-we-are {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.image-wrapper img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.content-subtitle {
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* Stats Section */
+.stats-bar {
+    background: #002b5b;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.stat-item h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #00d4ff;
+}
+
+/* Vision & Mission Cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.about-card {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-bottom: 4px solid #007bff;
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .who-we-are {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .stats-bar {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
